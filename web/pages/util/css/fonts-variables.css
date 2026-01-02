@@ -1,0 +1,40 @@
+/*fonts*/
+@font-face {
+  font-family: "pt";
+  src: url("../../../assets/fonts/pt_bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "osw";
+  src: url("../../../assets/fonts/osw.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "nuni";
+  src: url("../../../assets/fonts/nuni.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "mont";
+  src: url("../../../assets/fonts/mont.ttf") format("truetype");
+  font-display: swap;
+}
+
+/*varaibles*/
+:root {
+  --color-dark: #000000;
+  --color-cream: #f4ebce;
+  --color-sand: #ceb48e;
+  --color-brown: #906545;
+
+  --primary-color: var(--color-brown);
+  --secondary-color: var(--color-sand);
+  --tertiary-color: var(--color-dark);
+  --accent-color: var(--color-cream);
+
+  /* icon sizes */
+  --rem-p-75: 75rem;
+}

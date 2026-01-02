@@ -1,0 +1,7 @@
+@media (min-width: 720px) {
+  .apps-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
