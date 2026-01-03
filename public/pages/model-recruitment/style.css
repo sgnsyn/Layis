@@ -1,0 +1,45 @@
+@import url("../util/css/fonts-variables.css");
+@import url("../util/css/preset.css");
+@import url("../util/css/global-size.css");
+@import url("../util/css/global-class.css");
+
+@import url("./mobile.css");
+@import url("./desktop.css");
+
+body {
+  background-color: var(--primary-color);
+}
+
+nav {
+  background-color: var(--secondary-color);
+  padding: min(2rem, 5dvw) min(2.75rem, 2dvh);
+}
+
+a .logo-img {
+  height: 6.25rem;
+  width: 6.25rem;
+}
+
+.form-name {
+  font-family: osw;
+  color: var(--tertiary-color);
+  text-transform: uppercase;
+}
+
+.nav-btn-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-btn-container button {
+  background-color: var(--tertiary-color);
+
+  font-family: pt;
+  font-weight: bold;
+  color: var(--accent-color);
+  text-transform: uppercase;
+
+  display: grid;
+  place-content: center;
+  border: none;
+}

@@ -1,0 +1,33 @@
+@media (max-width: 720px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.375rem;
+  }
+
+  .mobile-nav .top-content,
+  .mobile-nav .bottom-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .form-name {
+    font-size: 3.2rem;
+  }
+
+  .nav-btn-mobile {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+  }
+
+  .nav-btn-mobile svg {
+    height: 1.5rem;
+    width: 0.75rem;
+  }
+}
