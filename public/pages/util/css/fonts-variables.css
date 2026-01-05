@@ -37,4 +37,18 @@
 
   /* icon sizes */
   --rem-p-75: 75rem;
+
+  --sb-track-color: #f1f1f1;
+  --sb-thumb-color: #888;
+  --sb-thumb-hover: #555;
+  --sb-size: 1rem;
 }
+
+/* 1. Firefox Styles (Standardized) */
+* {
+  scrollbar-color: var(--accent-color) transparent;
+  scrollbar-width: thin;
+  scrollbar-arrow-color: transparent;
+}
+
+/* 2. Chrome, Edge, and Safari Styles (WebKit) */

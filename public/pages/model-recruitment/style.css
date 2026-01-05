@@ -12,7 +12,7 @@ body {
 
 nav {
   background-color: var(--secondary-color);
-  padding: min(2rem, 5dvw) min(2.75rem, 2dvh);
+  padding: min(2.75rem, 4dvh) min(2rem, 5dvw);
 }
 
 a .logo-img {
@@ -42,4 +42,60 @@ a .logo-img {
   display: grid;
   place-content: center;
   border: none;
+}
+
+main {
+  display: flex;
+  padding-inline: min(7.4rem, 2dvw);
+  padding-block: 1rem;
+  justify-content: center;
+}
+
+.desktop-pages-indicator {
+  width: 20dvw;
+}
+
+form {
+  flex-grow: 1;
+  max-width: 54rem;
+}
+
+.form-group {
+  max-height: calc(100dvh - (min(5.5rem, 8dvh) + 10rem));
+  overflow-y: scroll;
+  padding: 1rem;
+}
+
+.attribute {
+  border-bottom: 1px solid var(--accent-color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-block: 2.2rem 4.4rem;
+}
+
+.attribute-name {
+  color: var(--accent-color);
+  font-size: 3.6rem;
+  font-family: osw;
+  text-transform: uppercase;
+}
+
+.attribute-description {
+  font-size: 1.6rem;
+  font-family: osw;
+  color: var(--accent-color);
+}
+
+.attribute-value.text-input {
+  background-color: var(--tertiary-color);
+  color: var(--accent-color);
+  font-size: 2rem;
+
+  grid-column: 2/2;
+  grid-row: 1/1;
+  justify-self: end;
+  max-width: 12ch;
+
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.4rem;
 }
