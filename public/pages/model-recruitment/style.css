@@ -8,16 +8,12 @@
 
 body {
   background-color: var(--primary-color);
+  height: 100dvh;
 }
 
 nav {
   background-color: var(--secondary-color);
-  padding: min(2.75rem, 4dvh) min(2rem, 5dvw);
-}
-
-a .logo-img {
-  height: 6.25rem;
-  width: 6.25rem;
+  height: 20%;
 }
 
 .form-name {
@@ -28,7 +24,6 @@ a .logo-img {
 
 .nav-btn-container {
   display: flex;
-  gap: 1.5rem;
 }
 
 .nav-btn-container button {
@@ -46,56 +41,73 @@ a .logo-img {
 
 main {
   display: flex;
-  padding-inline: min(7.4rem, 2dvw);
-  padding-block: 1rem;
   justify-content: center;
-}
-
-.desktop-pages-indicator {
-  width: 20dvw;
+  height: 80%;
 }
 
 form {
   flex-grow: 1;
   max-width: 54rem;
+  height: 100%;
 }
 
 .form-group {
-  max-height: calc(100dvh - (min(5.5rem, 8dvh) + 10rem));
-  overflow-y: scroll;
-  padding: 1rem;
+  padding-inline: 1rem;
+  overflow-y: auto;
+  height: 100%;
 }
 
 .attribute {
   border-bottom: 1px solid var(--accent-color);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding-block: 2.2rem 4.4rem;
 }
 
 .attribute-name {
   color: var(--accent-color);
-  font-size: 3.6rem;
   font-family: osw;
   text-transform: uppercase;
 }
 
 .attribute-description {
-  font-size: 1.6rem;
   font-family: osw;
   color: var(--accent-color);
 }
 
-.attribute-value.text-input {
+.attribute-value {
   background-color: var(--tertiary-color);
   color: var(--accent-color);
-  font-size: 2rem;
 
-  grid-column: 2/2;
-  grid-row: 1/1;
+  grid-column: 2/3;
+  grid-row: 1/2;
   justify-self: end;
-  max-width: 12ch;
 
-  padding: 0.7rem 1.2rem;
-  border-radius: 0.4rem;
+  border: none;
+  box-sizing: content-box;
+}
+
+.attribute-value.text-input {
+  max-width: 14ch;
+}
+
+.attribute-value.number-input {
+  max-width: 4ch;
+}
+
+.attribute-value.select-input {
+  border-radius: 100vw;
+  padding-inline: 1rem;
+  box-sizing: content-box;
+
+  font-family: osw;
+  text-transform: uppercase;
+}
+
+.attribute-value.text-input::placeholder {
+  font-family: osw;
+  font-style: italic;
+
+  text-transform: capitalize;
+  color: var(--accent-color);
+  opacity: 0.8;
 }

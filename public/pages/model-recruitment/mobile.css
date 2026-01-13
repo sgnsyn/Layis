@@ -3,10 +3,27 @@
     display: none;
   }
 
+  .desktop-pages-indicator {
+    display: none;
+  }
+
   .mobile-nav {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    padding-block: max(0.5rem, 1dvh);
     gap: 1.375rem;
+    height: 100%;
+  }
+
+  nav {
+    background-color: var(--secondary-color);
+    padding: min(2.75rem, 4dvw);
+  }
+
+  a .logo-img {
+    height: 6rem;
+    width: 6rem;
   }
 
   .mobile-nav .top-content,
@@ -29,5 +46,52 @@
   .nav-btn-mobile svg {
     height: 1.5rem;
     width: 0.75rem;
+  }
+
+  .nav-btn-container {
+    gap: 1.5rem;
+  }
+
+  main {
+    padding-inline: min(7.4rem, 2dvw);
+    padding-block: 1rem;
+  }
+
+  form {
+    flex-grow: 1;
+    max-width: 95vw;
+  }
+
+  .form-group {
+    max-height: calc(100dvh - (min(5.5rem, 8dvh) + 10rem));
+  }
+
+  .attribute {
+    padding-block: 2.2rem 1.2rem;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
+  .attribute-name {
+    font-size: 4rem;
+  }
+
+  .attribute-description {
+    font-size: 1.4rem;
+    grid-column: 1/3;
+  }
+
+  .attribute-value {
+    font-size: 1.6rem;
+    padding: 1rem;
+    height: 2ch;
+  }
+
+  .attribute-value.text-input {
+    border-radius: 0.4rem;
+  }
+
+  .attribute-value.text-input::placeholder {
+    font-size: 1.6rem;
   }
 }

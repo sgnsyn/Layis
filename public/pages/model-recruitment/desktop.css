@@ -9,12 +9,68 @@
     justify-content: space-between;
   }
 
+  nav {
+    background-color: var(--secondary-color);
+    display: grid;
+    padding-inline: 2.28rem;
+  }
+
+  a .logo-img {
+    height: 7.14rem;
+    width: 7.14rem;
+  }
+
   .form-name {
-    font-size: 4rem;
+    font-size: 4.57rem;
   }
 
   .nav-btn-desktop {
     padding: 0.5rem 1.25rem;
     border-radius: 100vw;
+  }
+
+  .nav-btn-container {
+    gap: 1.7rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  form {
+    flex-grow: 1;
+    max-width: 52rem;
+  }
+
+  .desktop-pages-indicator {
+    width: 2.14rem;
+  }
+
+  .attribute {
+    padding-block: 1rem 3.14rem;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .attribute-name {
+    font-size: 2.57rem;
+  }
+
+  .attribute-description {
+    font-size: 1.14rem;
+  }
+
+  .attribute-value {
+    font-size: 1.4rem;
+    padding: 0.5rem 0.85rem;
+    height: 3ch;
+  }
+
+  .attribute-value.text-input {
+    border-radius: 0.2rem;
+  }
+
+  .attribute-value.text-input::placeholder {
+    font-size: 1.4rem;
   }
 }

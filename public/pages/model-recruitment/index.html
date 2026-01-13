@@ -1,112 +1,92 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Model Recuriment</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-  </head>
 
-  <body>
-    <nav>
-      <div class="desktop-nav">
+<head>
+  <meta charset="UTF-8" />
+  <title>Model Recuriment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <nav>
+    <div class="desktop-nav">
+      <a href="#">
+        <img class="logo-img" src="../../assets/img/logo.png" alt="layis log" />
+      </a>
+      <span class="form-name">Essential</span>
+      <div class="nav-btn-container">
+        <button id="back-btn" class="nav-btn-desktop">Back</button>
+        <button id="next-btn" class="nav-btn-desktop">Next</button>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <div class="top-content">
         <a href="#">
-          <img
-            class="logo-img"
-            src="../../assets/img/logo.png"
-            alt="layis log"
-          />
+          <img class="logo-img" src="../../assets/img/logo.png" alt="layis log" />
         </a>
         <span class="form-name">Essential</span>
+      </div>
+      <div class="bottom-content">
+        <div class="mobile-pages-indicator"></div>
         <div class="nav-btn-container">
-          <button id="back-btn" class="nav-btn-desktop">Back</button>
-          <button id="next-btn" class="nav-btn-desktop">Next</button>
+          <button id="back-btn-mobile" class="nav-btn-mobile">
+            <svg>
+              <use href="../../assets/icons/left_arrow.svg#left-arrow"></use>
+            </svg>
+          </button>
+          <button id="next-btn-mobile" class="nav-btn-mobile">
+            <svg>
+              <use href="../../assets/icons/right_arrow.svg#right-arrow"></use>
+            </svg>
+          </button>
         </div>
       </div>
-      <div class="mobile-nav">
-        <div class="top-content">
-          <a href="#">
-            <img
-              class="logo-img"
-              src="../../assets/img/logo.png"
-              alt="layis log"
-            />
-          </a>
-          <span class="form-name">Essential</span>
+    </div>
+  </nav>
+  <main>
+    <div class="desktop-pages-indicator"></div>
+    <form action="#">
+      <div class="form-group form-essentials">
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Name</span>
+          <p class="attribute-description">
+            First name or of an individual (e.g., Meron).
+          </p>
+          <input class="attribute-value text-input" type="text" placeholder="backalcha" />
         </div>
-        <div class="bottom-content">
-          <div class="mobile-pages-indicator"></div>
-          <div class="nav-btn-container">
-            <button id="back-btn-mobile" class="nav-btn-mobile">
-              <svg>
-                <use href="../../assets/icons/left_arrow.svg#left-arrow"></use>
-              </svg>
-            </button>
-            <button id="next-btn-mobile" class="nav-btn-mobile">
-              <svg>
-                <use
-                  href="../../assets/icons/right_arrow.svg#right-arrow"
-                ></use>
-              </svg>
-            </button>
-          </div>
+
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Age</span>
+          <p class="attribute-description">
+            The number of years a person has lived (e.g., 25)
+          </p>
+          <input class="attribute-value number-input" type="number" />
+        </div>
+
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Gender</span>
+          <p class="attribute-description">
+            The gneder identity of an indivdual, typically selected as either
+            male or female (e.g, Male)
+          </p>
+          <select class="attribute-value select-input" id="" name="">
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Contact</span>
+          <p class="attribute-description">
+            Your number or social media handel (e.g., @mery23)
+          </p>
+          <input class="attribute-value text-input" type="text" />
         </div>
       </div>
-    </nav>
-    <main>
-      <div class="desktop-pages-indicator"></div>
-      <form action="#">
-        <div class="form-group form-essentials">
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Name</span>
-            <p class="attribute-description">
-              First name or of an individual (e.g., Bontu).
-            </p>
-            <input class="attribute-value text-input" type="text" />
-          </div>
+    </form>
+  </main>
+</body>
 
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Name</span>
-            <p class="attribute-description">
-              First name or of an individual (e.g., Bontu).
-            </p>
-            <input class="attribute-value text-input" type="text" />
-          </div>
-
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Name</span>
-            <p class="attribute-description">
-              First name or of an individual (e.g., Bontu).
-            </p>
-            <input class="attribute-value text-input" type="text" />
-          </div>
-
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Name</span>
-            <p class="attribute-description">
-              First name or of an individual (e.g., Bontu).
-            </p>
-            <input class="attribute-value text-input" type="text" />
-          </div>
-
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Name</span>
-            <p class="attribute-description">
-              First name or of an individual (e.g., Bontu).
-            </p>
-            <input class="attribute-value text-input" type="text" />
-          </div>
-
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Name</span>
-            <p class="attribute-description">
-              First name or of an individual (e.g., Bontu).
-            </p>
-            <input class="attribute-value text-input" type="text" />
-          </div>
-        </div>
-      </form>
-    </main>
-  </body>
 </html>

@@ -44,6 +44,10 @@ p {
   /* Prevents orphans on lines */
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {
     scroll-behavior: smooth;
