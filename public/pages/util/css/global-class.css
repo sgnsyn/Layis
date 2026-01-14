@@ -1,3 +1,27 @@
 .disabled {
   display: none !important;
 }
+
+.width-3ch {
+  width: 3ch;
+}
+
+.width-6ch {
+  width: 6ch;
+}
+
+.width-9ch {
+  width: 9ch;
+}
+
+.width-12ch {
+  width: 12ch;
+}
+
+.width-15ch {
+  width: 15ch;
+}
+
+.width-18ch {
+  width: 18ch;
+}

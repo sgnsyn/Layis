@@ -74,24 +74,18 @@ form {
   color: var(--accent-color);
 }
 
+.attribute-value-container {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  justify-self: end;
+}
+
 .attribute-value {
   background-color: var(--tertiary-color);
   color: var(--accent-color);
 
-  grid-column: 2/3;
-  grid-row: 1/2;
-  justify-self: end;
-
   border: none;
   box-sizing: content-box;
-}
-
-.attribute-value.text-input {
-  max-width: 14ch;
-}
-
-.attribute-value.number-input {
-  max-width: 4ch;
 }
 
 .attribute-value.select-input {
