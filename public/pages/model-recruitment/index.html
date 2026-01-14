@@ -52,7 +52,7 @@
         <div class="attribute single-value-attribute">
           <span class="attribute-name">Name</span>
           <p class="attribute-description">
-            First name or of an individual (e.g., Meron).
+            Enter your first name as it appears on your ID
           </p>
           <div class="attribute-value-container">
             <input class="attribute-value text-input width-15ch" type="text" placeholder="backalcha" />
@@ -61,32 +61,34 @@
 
         <div class="attribute single-value-attribute">
           <span class="attribute-name">Age</span>
-          <p class="attribute-description">
-            The number of years a person has lived (e.g., 25)
-          </p>
+          <p class="attribute-description">Your current age in years</p>
           <div class="attribute-value-container">
-            <input class="attribute-value number-input width-3ch" type="number" />
+            <input class="attribute-value number-input width-3ch" type="number" placeholder="25" />
           </div>
         </div>
 
         <div class="attribute single-value-attribute">
           <span class="attribute-name">Gender</span>
-          <p class="attribute-description">
-            The gneder identity of an indivdual, typically selected as either
-            male or female (e.g, Male)
-          </p>
+          <p class="attribute-description">Select your gender identity</p>
           <div class="attribute-value-container">
-            <select class="attribute-value select-input" id="" name="">
-              <option>Male</option>
-              <option>Female</option>
-            </select>
+            <div class="select-input-wrapper">
+              <select class="attribute-value select-input width-9ch" id="" name="">
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+              <div class="select-arrow">
+                <svg>
+                  <use href="../../assets/icons/down_arrow.svg#down-arrow"></use>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="attribute single-value-attribute">
           <span class="attribute-name">Contact</span>
           <p class="attribute-description">
-            Your number or social media handel (e.g., @mery23)
+            Phone number or social media username for contact
           </p>
           <div class="attribute-value-container">
             <input class="attribute-value text-input width-15ch" type="text" placeholder="@merry25" />

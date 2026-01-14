@@ -84,14 +84,15 @@
   .attribute-value {
     font-size: 1.6rem;
     padding: 1rem;
-    height: 2ch;
-  }
-
-  .attribute-value {
     border-radius: 0.4rem;
   }
 
   .attribute-value.text-input::placeholder {
     font-size: 1.6rem;
   }
+}
+
+.select-arrow {
+  width: 1.6rem;
+  height: 0.9rem;
 }
