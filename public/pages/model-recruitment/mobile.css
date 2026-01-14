@@ -90,9 +90,22 @@
   .attribute-value.text-input::placeholder {
     font-size: 1.6rem;
   }
-}
 
-.select-arrow {
-  width: 1.6rem;
-  height: 0.9rem;
+  .attribute-value.select-input {
+    border-radius: 100vw;
+  }
+
+  .select-arrow {
+    width: 1.6rem;
+    height: 0.9rem;
+  }
+
+  .contact-attribute-value-container {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .contact-attribute-value-container .select-input {
+    border-radius: 0.4rem;
+  }
 }

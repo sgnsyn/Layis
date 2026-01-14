@@ -88,6 +88,15 @@ form {
   box-sizing: content-box;
 }
 
+.attribute-value::placeholder {
+  font-family: osw;
+  font-style: italic;
+
+  text-transform: capitalize;
+  color: var(--accent-color);
+  opacity: 0.8;
+}
+
 .select-input-wrapper {
   position: relative;
   display: inline-block;
@@ -115,7 +124,6 @@ form {
 }
 
 .attribute-value.select-input {
-  border-radius: 100vw;
   padding-inline: 1rem;
   box-sizing: content-box;
 
@@ -123,11 +131,7 @@ form {
   text-transform: uppercase;
 }
 
-.attribute-value::placeholder {
-  font-family: osw;
-  font-style: italic;
-
-  text-transform: capitalize;
-  color: var(--accent-color);
-  opacity: 0.8;
+.contact-attribute-value-container {
+  display: flex;
+  gap: 1rem;
 }

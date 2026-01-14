@@ -71,8 +71,20 @@
     font-size: 1.4rem;
   }
 
+  .attribute-value.select-input {
+    border-radius: 100vw;
+  }
+
   .select-arrow {
     width: 1.14rem;
     height: 0.64rem;
+  }
+
+  .contact-attribute-value-container {
+    align-items: center;
+  }
+
+  .contact-attribute-value-container .select-input {
+    border-radius: 0.2rem;
   }
 }
