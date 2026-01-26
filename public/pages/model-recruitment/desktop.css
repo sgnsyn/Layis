@@ -72,7 +72,9 @@
   }
 
   .attribute-value.select-input {
+    padding-right: 3rem;
     border-radius: 100vw;
+    padding-right: 3rem;
   }
 
   .select-arrow {
