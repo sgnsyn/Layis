@@ -64,6 +64,7 @@
 
   .form-group {
     max-height: calc(100dvh - (min(5.5rem, 8dvh) + 10rem));
+    padding-right: 0.5rem;
   }
 
   .attribute {

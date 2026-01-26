@@ -42,6 +42,9 @@
     max-width: 52rem;
   }
 
+  .form-group {
+    padding-right: 0.35rem;
+  }
   .desktop-pages-indicator {
     width: 2.14rem;
   }

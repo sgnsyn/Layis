@@ -34,7 +34,7 @@ function nextBtnHandler() {
     currentPage.classList.add("disabled");
     targetPage.classList.remove("disabled");
 
-    setFormName(formNameSpans, currentPage);
+    setFormName(formNameSpans, targetPage);
   }
 }
 
@@ -58,7 +58,7 @@ function backBtnHandler() {
     currentPage.classList.add("disabled");
     targetPage.classList.remove("disabled");
 
-    setFormName(formNameSpans, currentPage);
+    setFormName(formNameSpans, targetPage);
   }
 }
 

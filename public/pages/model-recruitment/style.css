@@ -52,9 +52,9 @@ form {
 }
 
 .form-group {
-  padding-inline: 1rem;
   overflow-y: auto;
   height: 100%;
+  padding-right: 1rem;
 }
 
 .attribute {

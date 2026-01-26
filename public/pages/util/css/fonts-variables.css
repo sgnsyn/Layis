@@ -51,4 +51,8 @@
   scrollbar-arrow-color: transparent;
 }
 
+*::-webkit-scrollbar-track {
+  margin: 0 10px;
+}
+
 /* 2. Chrome, Edge, and Safari Styles (WebKit) */
