@@ -54,7 +54,6 @@ form {
 .form-group {
   overflow-y: auto;
   height: 100%;
-  padding-right: 1rem;
 }
 
 .attribute {
@@ -97,6 +96,25 @@ form {
   opacity: 0.8;
 }
 
+.form-measurments .attribute-value-container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.measurment-unit {
+  color: var(--accent-color);
+  font-family: osw;
+  width: 2ch;
+}
+
+.upload-photo-attribute .polaroid-photo {
+  justify-self: end;
+}
+
+.attribute-value.file-input {
+  width: fit-content;
+}
+
 .select-input-wrapper {
   position: relative;
   display: inline-block;
@@ -133,4 +151,20 @@ form {
 .contact-attribute-value-container {
   display: flex;
   gap: 1rem;
+}
+
+.custom-upload-button {
+  background-color: var(--tertiary-color);
+
+  font-family: pt;
+  font-weight: bold;
+  color: var(--accent-color);
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-self: center;
+
+  border-radius: 100vw;
+  justify-self: start;
 }

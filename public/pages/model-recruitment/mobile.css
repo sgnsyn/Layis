@@ -75,7 +75,6 @@
 
   .attribute-name {
     font-size: 4rem;
-
   }
 
   .attribute-description {
@@ -89,6 +88,14 @@
     border-radius: 0.4rem;
   }
 
+  .form-measurments .attribute-value-container {
+    gap: 1.2rem;
+  }
+
+  .measurment-unit {
+    font-size: 1.4rem;
+  }
+
   .attribute-value.text-input::placeholder {
     font-size: 1.6rem;
   }
@@ -96,6 +103,25 @@
   .attribute-value.select-input {
     padding-right: 4rem;
     border-radius: 100vw;
+  }
+
+  .upload-photo-attribute {
+    gap: 1rem;
+  }
+
+  .upload-photo-attribute .attribute-description {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+
+  .upload-photo-attribute .attribute-description::after {
+    content: " ↑";
+  }
+
+  .upload-photo-attribute .polaroid-photo {
+    grid-row: 1/3;
+    grid-column: 2/3;
+    justify-self: end;
   }
 
   .select-arrow {
@@ -110,5 +136,16 @@
 
   .contact-attribute-value-container .select-input {
     border-radius: 0.4rem;
+  }
+
+  .custom-upload-button {
+    font-size: 1.7rem;
+    gap: 2rem;
+    padding: 0.5rem 1.4rem;
+  }
+
+  .custom-upload-button svg {
+    height: 1.4rem;
+    width: 1.4rem;
   }
 }

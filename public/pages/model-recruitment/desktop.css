@@ -45,12 +45,13 @@
   .form-group {
     padding-right: 0.35rem;
   }
+
   .desktop-pages-indicator {
     width: 2.14rem;
   }
 
   .attribute {
-    padding-block: 1rem 2.5rem;
+    padding-block: 1rem 1.5rem;
     align-items: center;
     gap: 0.5rem;
   }
@@ -70,6 +71,14 @@
     border-radius: 0.2rem;
   }
 
+  .form-measurments .attribute-value-container {
+    gap: 0.78rem;
+  }
+
+  .measurment-unit {
+    font-size: 1.14rem;
+  }
+
   .attribute-value.text-input::placeholder {
     font-size: 1.4rem;
   }
@@ -80,9 +89,28 @@
     padding-right: 3rem;
   }
 
+  .upload-photo-attribute .attribute-description {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .upload-photo-attribute .attribute-description::after {
+    content: " →";
+  }
+
+  .upload-photo-attribute .polaroid-photo {
+    grid-row: 1/4;
+    grid-column: 2/3;
+    justify-self: end;
+  }
+
   .select-arrow {
     width: 1.14rem;
     height: 0.64rem;
+  }
+
+  .upload-container {
+    margin-top: 1.5rem;
   }
 
   .contact-attribute-value-container {
@@ -91,5 +119,16 @@
 
   .contact-attribute-value-container .select-input {
     border-radius: 0.2rem;
+  }
+
+  .custom-upload-button {
+    font-size: 1.2rem;
+    gap: 1.4rem;
+    padding: 0.5rem 1.25rem;
+  }
+
+  .custom-upload-button svg {
+    height: 1rem;
+    width: 1rem;
   }
 }

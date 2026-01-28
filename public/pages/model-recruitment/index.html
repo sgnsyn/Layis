@@ -1,401 +1,400 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Model Recuriment</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" type="module" defer></script>
-  </head>
 
-  <body>
-    <nav>
-      <div class="desktop-nav">
+<head>
+  <meta charset="UTF-8" />
+  <title>Model Recuriment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" type="module" defer></script>
+</head>
+
+<body>
+  <nav>
+    <div class="desktop-nav">
+      <a href="#">
+        <img class="logo-img" src="../../assets/img/logo.png" alt="layis log" />
+      </a>
+      <span class="form-name">Essential</span>
+      <div class="nav-btn-container">
+        <button id="back-btn-desktop" class="nav-btn-desktop">Back</button>
+        <button id="next-btn-desktop" class="nav-btn-desktop">Next</button>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <div class="top-content">
         <a href="#">
-          <img
-            class="logo-img"
-            src="../../assets/img/logo.png"
-            alt="layis log"
-          />
+          <img class="logo-img" src="../../assets/img/logo.png" alt="layis log" />
         </a>
-        <span   class="form-name">Essential</span>
+        <span class="form-name">Essential</span>
+      </div>
+      <div class="bottom-content">
+        <div class="mobile-pages-indicator"></div>
         <div class="nav-btn-container">
-          <button id="back-btn-desktop" class="nav-btn-desktop">Back</button>
-          <button id="next-btn-desktop" class="nav-btn-desktop">Next</button>
+          <button id="back-btn-mobile" class="nav-btn-mobile">
+            <svg>
+              <use href="../../assets/icons/left_arrow.svg#left-arrow"></use>
+            </svg>
+          </button>
+          <button id="next-btn-mobile" class="nav-btn-mobile">
+            <svg>
+              <use href="../../assets/icons/right_arrow.svg#right-arrow"></use>
+            </svg>
+          </button>
         </div>
       </div>
-      <div class="mobile-nav">
-        <div class="top-content">
-          <a href="#">
-            <img
-              class="logo-img"
-              src="../../assets/img/logo.png"
-              alt="layis log"
-            />
-          </a>
-          <span class="form-name">Essential</span>
+    </div>
+  </nav>
+  <main>
+    <div class="desktop-pages-indicator"></div>
+    <form action="#">
+      <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+      <!--   Essentials -->
+      <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+      <div class="form-group form-essentials disabled" data-page="1" data-name="Essentials">
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Name</span>
+          <p class="attribute-description">
+            Enter your first name as it appears on your ID
+          </p>
+          <div class="attribute-value-container">
+            <input class="attribute-value text-input width-15ch" type="text" name="name" placeholder="backalcha" />
+          </div>
         </div>
-        <div class="bottom-content">
-          <div class="mobile-pages-indicator"></div>
-          <div class="nav-btn-container">
-            <button id="back-btn-mobile" class="nav-btn-mobile">
-              <svg>
-                <use href="../../assets/icons/left_arrow.svg#left-arrow"></use>
-              </svg>
-            </button>
-            <button id="next-btn-mobile" class="nav-btn-mobile">
-              <svg>
-                <use
-                  href="../../assets/icons/right_arrow.svg#right-arrow"
-                ></use>
-              </svg>
-            </button>
+
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Age</span>
+          <p class="attribute-description">Your current age in years</p>
+          <div class="attribute-value-container">
+            <input class="attribute-value number-input width-3ch" type="number" placeholder="25" />
+          </div>
+        </div>
+
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Gender</span>
+          <p class="attribute-description">Select your gender identity</p>
+          <div class="attribute-value-container">
+            <div class="select-input-wrapper">
+              <select class="attribute-value select-input" id="" name="gender">
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+              <div class="select-arrow">
+                <svg>
+                  <use href="../../assets/icons/down_arrow.svg#down-arrow"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Contact</span>
+          <p class="attribute-description">
+            Select contact type and enter phone number or social media
+            username
+          </p>
+          <div class="attribute-value-container contact-attribute-value-container">
+            <input class="attribute-value text-input width-12ch" type="text" placeholder="@merry25" />
+            <div class="select-input-wrapper">
+              <select class="attribute-value select-input" id="contact-type" name="contact-type">
+                <option>Phone</option>
+                <option>Telegram</option>
+                <option>Instagram</option>
+                <option>Tiktok</option>
+              </select>
+              <div class="select-arrow">
+                <svg>
+                  <use href="../../assets/icons/down_arrow.svg#down-arrow"></use>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </nav>
-    <main>
-      <div class="desktop-pages-indicator"></div>
-      <form action="#">
-        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-        <!--   Essentials -->
-        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-        <div class="form-group form-essentials disabled" data-page="1" data-name="Essentials">
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Name</span>
-            <p class="attribute-description">
-              Enter your first name as it appears on your ID
-            </p>
-            <div class="attribute-value-container">
-              <input
-                class="attribute-value text-input width-15ch"
-                type="text"
-                name="name"
-                placeholder="backalcha"
-              />
-            </div>
-          </div>
 
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Age</span>
-            <p class="attribute-description">Your current age in years</p>
-            <div class="attribute-value-container">
-              <input
-                class="attribute-value number-input width-3ch"
-                type="number"
-                placeholder="25"
-              />
-            </div>
+      <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+      <!--   Measurment -->
+      <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+      <div class="form-group form-measurments disabled" data-page="2" data-name="Measurment">
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Height</span>
+          <p class="attribute-description">
+            The measurement of a person's height in centimeters (e.g., 175.5)
+          </p>
+          <div class="attribute-value-container">
+            <input class="attribute-value number-input width-5ch" type="number" name=">height" placeholder="175.5" />
+            <span class="measurment-unit">cm</span>
           </div>
+        </div>
 
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Gender</span>
-            <p class="attribute-description">Select your gender identity</p>
-            <div class="attribute-value-container">
-              <div class="select-input-wrapper">
-                <select
-                  class="attribute-value select-input "
-                  id=""
-                  name="gender"
-                >
-                  <option>Male</option>
-                  <option>Female</option>
-                </select>
-                <div class="select-arrow">
-                  <svg>
-                    <use
-                      href="../../assets/icons/down_arrow.svg#down-arrow"
-                    ></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Weight</span>
+          <p class="attribute-description">
+            The measurement of a person's body weight in kilograms (e.g., 70
+            kg).
+          </p>
+          <div class="attribute-value-container">
+            <input class="attribute-value number-input width-5ch" type="number" name=">weight" placeholder="70" />
+            <span class="measurment-unit">kg</span>
           </div>
+        </div>
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Bust / Chest</span>
+          <p class="attribute-description">
+            The measurement around the fullest part of a chest,in centimeters
+            (e.g., 90 cm).
+          </p>
+          <div class="attribute-value-container">
+            <input class="attribute-value number-input width-5ch" type="number" name=">bust" placeholder="90" />
 
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Contact</span>
-            <p class="attribute-description">
-              Select contact type and enter phone number or social media
-              username
-            </p>
-            <div
-              class="attribute-value-container contact-attribute-value-container"
-            >
-              <input
-                class="attribute-value text-input  width-12ch "
-                type="text"
-                placeholder="@merry25"
-              />
-              <div class="select-input-wrapper">
-                <select
-                  class="attribute-value select-input "
-                  id="contact-type"
-                  name="contact-type"
-                >
-                  <option>Phone</option>
-                  <option>Telegram</option>
-                  <option>Instagram</option>
-                  <option>Tiktok</option>
-                </select>
-                <div class="select-arrow">
-                  <svg>
-                    <use
-                      href="../../assets/icons/down_arrow.svg#down-arrow"
-                    ></use>
-                  </svg>
-                </div>
+            <span class="measurment-unit">cm</span>
+          </div>
+        </div>
+
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Waist</span>
+          <p class="attribute-description">
+            The measurement around the narrowest part of the torso, usually
+            above the navel, in centimeters (e.g., 70 cm).
+          </p>
+          <div class="attribute-value-container">
+            <input class="attribute-value number-input width-5ch" type="number" name=">waist" placeholder="70" />
+
+            <span class="measurment-unit">cm</span>
+          </div>
+        </div>
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Hips</span>
+          <p class="attribute-description">
+            The measurement around the fullest part of the hips and buttocks,
+            in centimeters (e.g., 95 cm).
+          </p>
+          <div class="attribute-value-container">
+            <input class="attribute-value number-input width-5ch" type="number" name=">hips" placeholder="95" />
+
+            <span class="measurment-unit">cm</span>
+          </div>
+        </div>
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Inseam</span>
+          <p class="attribute-description">
+            The measurement from the crotch to the bottom of the leg,
+            centimeters (e.g., 80 cm).
+          </p>
+          <div class="attribute-value-container">
+            <input class="attribute-value number-input width-5ch" type="number" name=">inseam" placeholder="80" />
+
+            <span class="measurment-unit">cm</span>
+          </div>
+        </div>
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Shoe Size</span>
+          <p class="attribute-description">
+            The size of a person's footwear, typically based on EU standard
+            sizing (e.g., 42).
+          </p>
+          <div class="attribute-value-container">
+            <input class="attribute-value number-input width-5ch" type="number" name=">shoe" placeholder="42" />
+
+            <span class="measurment-unit"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+      <!--  Appearance -->
+      <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+      <div class="form-group form-appearance disabled" data-page="3" data-name="Appearance">
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Skin Tone</span>
+          <p class="attribute-description">
+            The natural color or shade of a person's skin, by specific
+            undertones (e.g., Light).
+          </p>
+          <div class="attribute-value-container">
+            <div class="select-input-wrapper">
+              <select class="attribute-value select-input" id="" name="skin-tone">
+                <option value="very-light">Very Light</option>
+                <option value="light">Light</option>
+                <option value="medium-light">Medium Light</option>
+                <option value="medium">Medium</option>
+                <option value="medium-dakr">Medium Dark</option>
+                <option value="tan">Tan</option>
+                <option value="dark">Dark</option>
+                <option value="deep-dark">Deep Dark</option>
+                <option value="ebony">Ebony</option>
+              </select>
+              <div class="select-arrow">
+                <svg>
+                  <use href="../../assets/icons/down_arrow.svg#down-arrow"></use>
+                </svg>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-        <!--   Measurment -->
-        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-        <div class="form-group form-measurments disabled" data-page="2" data-name="Measurment">
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Height</span>
-            <p class="attribute-description">
-              The measurement of a person's height in centimeters (e.g., 175.5)
-            </p>
-            <div class="attribute-value-container">
-              <input
-                class="attribute-value number-input  width-5ch"
-                type="number"
-                name=">height"
-                placeholder="25"
-              />
-            </div>
-          </div>
-
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Weight</span>
-            <p class="attribute-description">
-              The measurement of a person's body weight in kilograms (e.g., 70
-              kg).
-            </p>
-            <div class="attribute-value-container">
-              <input
-                class="attribute-value number-input width-5ch"
-                type="number"
-                name=">weight"
-                placeholder="25"
-              />
-            </div>
-          </div>
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Bust / Chest</span>
-            <p class="attribute-description">
-              The measurement around the fullest part of a chest,in centimeters
-              (e.g., 90 cm).
-            </p>
-            <div class="attribute-value-container">
-              <input
-                class="attribute-value number-input width-5ch"
-                type="number"
-                name=">bust"
-                placeholder="25"
-              />
-            </div>
-          </div>
-
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Waist</span>
-            <p class="attribute-description">
-              The measurement around the narrowest part of the torso, usually
-              above the navel, in centimeters (e.g., 70 cm).
-            </p>
-            <div class="attribute-value-container">
-              <input
-                class="attribute-value number-input width-5ch"
-                type="number"
-                name=">waist"
-                placeholder="25"
-              />
-            </div>
-          </div>
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Hips</span>
-            <p class="attribute-description">
-              The measurement around the fullest part of the hips and buttocks,
-              in centimeters (e.g., 95 cm).
-            </p>
-            <div class="attribute-value-container">
-              <input
-                class="attribute-value number-input width-5ch"
-                type="number"
-                name=">hips"
-                placeholder="25"
-              />
-            </div>
-          </div>
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Inseam</span>
-            <p class="attribute-description">
-              The measurement from the crotch to the bottom of the leg,
-              centimeters (e.g., 80 cm).
-            </p>
-            <div class="attribute-value-container">
-              <input
-                class="attribute-value number-input width-5ch"
-                type="number"
-                name=">inseam"
-                placeholder="25"
-              />
-            </div>
-          </div>
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Shoe Size</span>
-            <p class="attribute-description">
-              The size of a person's footwear, typically based on EU standard
-              sizing (e.g., 42).
-            </p>
-            <div class="attribute-value-container">
-              <input
-                class="attribute-value number-input width-5ch"
-                type="number"
-                name=">shoe"
-                placeholder="25"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-        <!--  Appearance -->
-        <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-
-        <div class="form-group form-appearance" data-page="3" data-name="Appearance">
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Skin Tone</span>
-            <p class="attribute-description">
-              The natural color or shade of a person's skin, by specific
-              undertones (e.g., Light).
-            </p>
-            <div class="attribute-value-container">
-              <div class="select-input-wrapper">
-                <select
-                  class="attribute-value select-input "
-                  id=""
-                  name="skin-tone"
-                >
-                  <option value="very-light">Very Light</option>
-                  <option value="light">Light</option>
-                  <option value="medium-light">Medium Light</option>
-                  <option value="medium">Medium</option>
-                  <option value="medium-dakr">Medium Dark</option>
-                  <option value="tan">Tan</option>
-                  <option value="dark">Dark</option>
-                  <option value="deep-dark">Deep Dark</option>
-                  <option value="ebony">Ebony</option>
-                </select>
-                <div class="select-arrow">
-                  <svg>
-                    <use
-                      href="../../assets/icons/down_arrow.svg#down-arrow"
-                    ></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Hair Type</span>
-            <p class="attribute-description">
-              The texture or pattern of a person's hair, typically classified as
-              straight, wavy, curly, or coily (e.g., Curly).
-            </p>
-            <div class="attribute-value-container">
-              <div class="select-input-wrapper">
-                <select
-                  class="attribute-value select-input "
-                  id=""
-                  name="hair-type"
-                >
-                  <option value="straight">Straight</option>
-                  <option value="wavy">Wavy</option>
-                  <option value="curly">Curly</option>
-                  <option value="kinky">Kinky</option>
-                  <option value="afro">Afro</option>
-                  <option value="dreadlocks">Dreadlocks</option>
-                </select>
-                <div class="select-arrow">
-                  <svg>
-                    <use
-                      href="../../assets/icons/down_arrow.svg#down-arrow"
-                    ></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Hair Color</span>
-            <p class="attribute-description">
-              The natural or dyed color of a person's hair (e.g., Brown).
-            </p>
-            <div class="attribute-value-container">
-              <div class="select-input-wrapper">
-                <select
-                  class="attribute-value select-input "
-                  id=""
-                  name="hair-color"
-                >
-                  <option value="black">Black</option>
-                  <option value="brown">Brown</option>
-                  <option value="blonde">Blonde</option>
-                  <option value="auburn">Auburn</option>
-                  <option value="red">Red</option>
-                  <option value="gray">Gray</option>
-                  <option value="white">White</option>
-                </select>
-                <div class="select-arrow">
-                  <svg>
-                    <use
-                      href="../../assets/icons/down_arrow.svg#down-arrow"
-                    ></use>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="attribute single-value-attribute">
-            <span class="attribute-name">Face Type</span>
-            <p class="attribute-description">
-              The shape or structure of a person's face, commonly categorized as
-              oval, round, square, heart, etc. (e.g., Oval).
-            </p>
-            <div class="attribute-value-container">
-              <div class="select-input-wrapper">
-                <select
-                  class="attribute-value select-input "
-                  id=""
-                  name="face-type"
-                >
-                  <option value="oval">Oval</option>
-                  <option value="round">Round</option>
-                  <option value="square">Square</option>
-                  <option value="heart">Heart</option>
-                  <option value="diamond">Diamond</option>
-                  <option value="oblong">Oblong</option>
-                  <option value="triangle">Triangle</option>
-                  <option value="pear">Pear</option>
-                </select>
-                <div class="select-arrow">
-                  <svg>
-                    <use
-                      href="../../assets/icons/down_arrow.svg#down-arrow"
-                    ></use>
-                  </svg>
-                </div>
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Hair Type</span>
+          <p class="attribute-description">
+            The texture or pattern of a person's hair, typically classified as
+            straight, wavy, curly, or coily (e.g., Curly).
+          </p>
+          <div class="attribute-value-container">
+            <div class="select-input-wrapper">
+              <select class="attribute-value select-input" id="" name="hair-type">
+                <option value="straight">Straight</option>
+                <option value="wavy">Wavy</option>
+                <option value="curly">Curly</option>
+                <option value="kinky">Kinky</option>
+                <option value="afro">Afro</option>
+                <option value="dreadlocks">Dreadlocks</option>
+              </select>
+              <div class="select-arrow">
+                <svg>
+                  <use href="../../assets/icons/down_arrow.svg#down-arrow"></use>
+                </svg>
               </div>
             </div>
           </div>
         </div>
-      </form>
-    </main>
-  </body>
+
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Hair Color</span>
+          <p class="attribute-description">
+            The natural or dyed color of a person's hair (e.g., Brown).
+          </p>
+          <div class="attribute-value-container">
+            <div class="select-input-wrapper">
+              <select class="attribute-value select-input" id="" name="hair-color">
+                <option value="black">Black</option>
+                <option value="brown">Brown</option>
+                <option value="blonde">Blonde</option>
+                <option value="auburn">Auburn</option>
+                <option value="red">Red</option>
+                <option value="gray">Gray</option>
+                <option value="white">White</option>
+              </select>
+              <div class="select-arrow">
+                <svg>
+                  <use href="../../assets/icons/down_arrow.svg#down-arrow"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="attribute single-value-attribute">
+          <span class="attribute-name">Face Type</span>
+          <p class="attribute-description">
+            The shape or structure of a person's face, commonly categorized as
+            oval, round, square, heart, etc. (e.g., Oval).
+          </p>
+          <div class="attribute-value-container">
+            <div class="select-input-wrapper">
+              <select class="attribute-value select-input" id="" name="face-type">
+                <option value="oval">Oval</option>
+                <option value="round">Round</option>
+                <option value="square">Square</option>
+                <option value="heart">Heart</option>
+                <option value="diamond">Diamond</option>
+                <option value="oblong">Oblong</option>
+                <option value="triangle">Triangle</option>
+                <option value="pear">Pear</option>
+              </select>
+              <div class="select-arrow">
+                <svg>
+                  <use href="../../assets/icons/down_arrow.svg#down-arrow"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+      <!--   Polaroids -->
+      <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
+
+      <div class="form-group form-polaroids" data-page="4" data-name="Polaroids">
+        <div class="attribute upload-photo-attribute">
+          <span class="attribute-name">Front</span>
+          <p class="attribute-description">
+            An image capturing the front view of a person, typically showing their face and upper body.
+          </p>
+
+          <div class="upload-container">
+            <input type="file" name="upload-front" id="file-upload" class="file-input attribute-value" hidden />
+            <label for="file-upload" class="custom-upload-button">
+              <span class="custom-upload-button">UPLOAD<span>
+                  <svg>
+                    <use href="../../assets/icons/plus.svg#plus"></use>
+                  </svg>
+            </label>
+          </div>
+
+          <img class="polaroid-photo" src="../../assets/img/model-recruitment/front.png" alt="model front shot" />
+        </div>
+
+
+        <div class="attribute upload-photo-attribute">
+          <span class="attribute-name">side</span>
+          <p class="attribute-description">
+            An image capturing the side profile of a person, often highlighting facial features or body shape.
+          </p>
+
+          <div class="upload-container">
+            <input type="file" name="upload-side" id="file-upload" class="file-input attribute-value" hidden />
+            <label for="file-upload" class="custom-upload-button">
+              <span class="custom-upload-button">UPLOAD<span>
+                  <svg>
+                    <use href="../../assets/icons/plus.svg#plus"></use>
+                  </svg>
+            </label>
+          </div>
+
+          <img class="polaroid-photo" src="../../assets/img/model-recruitment/side.png" alt="model front shot" />
+        </div>
+        <div class="attribute upload-photo-attribute">
+          <span class="attribute-name">back</span>
+          <p class="attribute-description">
+            An image capturing the back view of a person, typically showing the back of the head and body.
+          </p>
+
+          <div class="upload-container">
+            <input type="file" name="upload-back" id="file-upload" class="file-input attribute-value" hidden />
+            <label for="file-upload" class="custom-upload-button">
+              <span class="custom-upload-button">UPLOAD<span>
+                  <svg>
+                    <use href="../../assets/icons/plus.svg#plus"></use>
+                  </svg>
+            </label>
+          </div>
+
+          <img class="polaroid-photo" src="../../assets/img/model-recruitment/back.png" alt="model front shot" />
+        </div>
+        <div class="attribute upload-photo-attribute">
+          <span class="attribute-name">full body</span>
+          <p class="attribute-description">
+            An image capturing the entire body of a person from head to toe, taken from the front.
+          </p>
+
+          <div class="upload-container">
+            <input type="file" name="upload-full" id="file-upload" class="file-input attribute-value" hidden />
+            <label for="file-upload" class="custom-upload-button">
+              <span class="custom-upload-button">UPLOAD<span>
+                  <svg>
+                    <use href="../../assets/icons/plus.svg#plus"></use>
+                  </svg>
+            </label>
+          </div>
+
+          <img class="polaroid-photo" src="../../assets/img/model-recruitment/full.png" alt="model front shot" />
+        </div>
+      </div>
+    </form>
+  </main>
+</body>
+
 </html>
