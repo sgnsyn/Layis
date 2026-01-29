@@ -1,18 +1,29 @@
 import {
+    createPageProgressBtn,
   getCurrentPage,
   getTargetPage,
+  highlightPageProgressBtn,
   setFormName,
   toggleDisabled,
 } from "./util-js/ui.js";
+
+const formNameSpans = document.getElementsByClassName("form-name");
 
 const desktopBackBtn = document.getElementById("back-btn-desktop");
 const desktopNextBtn = document.getElementById("next-btn-desktop");
 const mobileBackBtn = document.getElementById("back-btn-mobile");
 const mobileNextBtn = document.getElementById("next-btn-mobile");
-const formNameSpans = document.getElementsByClassName("form-name");
+
+const desktopPageIndicator = document.getElementById("desktop-pages-indicator")
+const mobilePageIndicator = document.getElementById("mobile-pages-indicator")
+
+const desktopSubmitButton = document.getElementById("submit-btn-desktop")
+const mobileSubmitButton = document.getElementById("submit-btn-mobile")
+
 
 const formGroups = document.getElementsByClassName("form-group");
 const pageLength = formGroups.length;
+
 
 function nextBtnHandler() {
   const currentPage = getCurrentPage(formGroups);
@@ -34,6 +45,16 @@ function nextBtnHandler() {
     currentPage.classList.add("disabled");
     targetPage.classList.remove("disabled");
 
+    const mobileButtons = mobilePageIndicator.querySelectorAll("button")
+    if(mobileButtons){
+      highlightPageProgressBtn(mobileButtons, targetPageNumber)
+    }
+
+    const desktopButton = desktopPageIndicator.querySelectorAll("button")
+    if(desktopButton ){
+      highlightPageProgressBtn(desktopButton , targetPageNumber)
+    }
+
     setFormName(formNameSpans, targetPage);
   }
 }
@@ -54,9 +75,20 @@ function backBtnHandler() {
   }
 
   const targetPage = getTargetPage(formGroups, targetPageNumber);
+
   if (currentPage && targetPage) {
     currentPage.classList.add("disabled");
     targetPage.classList.remove("disabled");
+
+    const mobileButtons = mobilePageIndicator.querySelectorAll("button")
+    if(mobileButtons){
+      highlightPageProgressBtn(mobileButtons, targetPageNumber)
+    }
+
+    const desktopButton = desktopPageIndicator.querySelectorAll("button")
+    if(desktopButton ){
+      highlightPageProgressBtn(desktopButton , targetPageNumber)
+    }
 
     setFormName(formNameSpans, targetPage);
   }
@@ -69,6 +101,12 @@ function initialize() {
   }
 
   const currentPageNumber = parseInt(currentPage.dataset.page);
+
+  const mobilePageIndicatorBtn = createPageProgressBtn(pageLength, currentPageNumber) 
+  const desktopPageIndicatorBtn = createPageProgressBtn(pageLength, currentPageNumber) 
+
+  mobilePageIndicator.append(...mobilePageIndicatorBtn)
+  desktopPageIndicator.append(...desktopPageIndicatorBtn)
 
   switch (currentPageNumber) {
     case pageLength:

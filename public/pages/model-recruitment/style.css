@@ -40,7 +40,6 @@ nav {
 }
 
 main {
-  display: flex;
   justify-content: center;
   height: 80%;
 }
@@ -168,3 +167,21 @@ form {
   border-radius: 100vw;
   justify-self: start;
 }
+
+.values-container {
+  border-bottom: 1px solid var(--accent-color);
+  background-color: var(--tertiary-color);
+}
+
+.values-title {
+  color: var(--accent-color);
+  font-family: osw;
+  text-transform: uppercase;
+}
+
+.values-description {
+  color: var(--accent-color);
+  font-family: osw;
+  text-align: justify;
+}
+

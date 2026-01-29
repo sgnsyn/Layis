@@ -24,18 +24,42 @@ export function getTargetPage(formGroups, targetPageNumber) {
   return targetPage;
 }
 
-export function setFormName(formNameSpans, currentPage){
-    for (const formNameSpan of formNameSpans) {
-      formNameSpan.textContent = currentPage.dataset.name;
-    }
+export function setFormName(formNameSpans, currentPage) {
+  for (const formNameSpan of formNameSpans) {
+    formNameSpan.textContent = currentPage.dataset.name;
+  }
 }
 
-export function toggleDisabled(elements, toggle){
-  for(const element of elements){
-    if(toggle){
-      element.setAttribute("disabled", "disabled")
-    }else{
-      element.removeAttribute("disabled")
+export function toggleDisabled(elements, toggle) {
+  for (const element of elements) {
+    if (toggle) {
+      element.setAttribute("disabled", "disabled");
+    } else {
+      element.removeAttribute("disabled");
+    }
+  }
+}
+
+export function createPageProgressBtn(pageLength, currentPage = 1) {
+  const res = [];
+  for (let i = 1; i <= pageLength; i++) {
+    const button = document.createElement("button");
+    button.dataset.pageNumber = i;
+
+    if(i==currentPage){
+      button.classList.add("selected")
+    }
+
+    res.push(button);
+  }
+  return res;
+}
+
+export function highlightPageProgressBtn(buttons, targetPage){
+  for(const button of buttons){
+    button.classList.remove("selected")
+    if(button.dataset.pageNumber == targetPage){
+      button.classList.add("selected")
     }
   }
 }
