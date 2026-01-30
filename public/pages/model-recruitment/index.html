@@ -19,7 +19,7 @@
       <div class="nav-btn-container">
         <button id="back-btn-desktop" class="nav-btn-desktop">Back</button>
         <button id="next-btn-desktop" class="nav-btn-desktop">Next</button>
-        <button id="submit-btn-desktop" type="submit" class="nav-btn-submit disabled">Submit</button>
+        <button id="submit-btn-desktop" type="submit" class="nav-btn-submit nav-btn-desktop disabled">Submit</button>
       </div>
     </div>
     <div class="mobile-nav">
@@ -38,25 +38,25 @@
               <use href="../../assets/icons/left_arrow.svg#left-arrow"></use>
             </svg>
           </button>
-          <button id="next-btn-mobile" type="submit" class="nav-btn-mobile">
+          <button id="next-btn-mobile" class="nav-btn-mobile">
             <svg>
               <use href="../../assets/icons/right_arrow.svg#right-arrow"></use>
             </svg>
           </button>
 
-          <button id="submit-btn-mobile" class="nav-btn-submit disabled">Submit</button>
+          <button id="submit-btn-mobile" type="submit" class="nav-btn-submit disabled">Submit</button>
         </div>
       </div>
     </div>
   </nav>
-  <main>
+  <main id="main">
     <div id="desktop-pages-indicator">
     </div>
     <form action="#">
       <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
       <!--   Essentials -->
       <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
-      <div class="form-group form-essentials disabled" data-page="1" data-name="Essentials">
+      <div class="form-group form-essentials " data-page="1" data-name="Essentials">
         <div class="attribute single-value-attribute">
           <span class="attribute-name">Name</span>
           <p class="attribute-description">
@@ -339,7 +339,7 @@
             </label>
           </div>
 
-          <img class="polaroid-photo" src="../../assets/img/model-recruitment/front.png" alt="model front shot" />
+          <img class="polaroid-photo" src="../../assets/img/model-recruitment/front.jpg" alt="model front shot" />
         </div>
 
 
@@ -359,7 +359,7 @@
             </label>
           </div>
 
-          <img class="polaroid-photo" src="../../assets/img/model-recruitment/side.png" alt="model front shot" />
+          <img class="polaroid-photo" src="../../assets/img/model-recruitment/side.jpg" alt="model side shot" />
         </div>
         <div class="attribute upload-photo-attribute">
           <span class="attribute-name">back</span>
@@ -377,7 +377,7 @@
             </label>
           </div>
 
-          <img class="polaroid-photo" src="../../assets/img/model-recruitment/back.png" alt="model front shot" />
+          <img class="polaroid-photo" src="../../assets/img/model-recruitment/back.jpg" alt="model back shot" />
         </div>
         <div class="attribute upload-photo-attribute">
           <span class="attribute-name">full body</span>
@@ -395,7 +395,7 @@
             </label>
           </div>
 
-          <img class="polaroid-photo" src="../../assets/img/model-recruitment/full.png" alt="model front shot" />
+          <img class="polaroid-photo" src="../../assets/img/model-recruitment/full.jpg" alt="model full shot" />
         </div>
       </div>
 
@@ -408,7 +408,7 @@
 
 
         <div class="attribute single-value-attribute">
-          <span class="attribute-name">introduction</span>
+          <span class="attribute-name">intro</span>
           <p class="attribute-description">
             A 30-minute introductory video where the individual describes their name, age, height, city of residence,
             and motivations for joining LAYIS
@@ -453,7 +453,7 @@
       <!--  Values-->
       <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
 
-      <div class="form-group form-values" data-page="6" data-name="Values">
+      <div class="form-group form-values disabled" data-page="6" data-name="Values">
         <div class="values-container">
           <h2 class="values-title">About LAYIS</h2>
           <p class="values-description">

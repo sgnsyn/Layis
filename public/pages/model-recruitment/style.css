@@ -24,6 +24,7 @@ nav {
 
 .nav-btn-container {
   display: flex;
+  align-items: center;
 }
 
 .nav-btn-container button {
@@ -42,6 +43,7 @@ nav {
 main {
   justify-content: center;
   height: 80%;
+  position: relative;
 }
 
 form {
@@ -107,6 +109,7 @@ form {
 }
 
 .upload-photo-attribute .polaroid-photo {
+  border-radius: .5rem;
   justify-self: end;
 }
 
@@ -166,6 +169,10 @@ form {
 
   border-radius: 100vw;
   justify-self: start;
+}
+
+.custom-upload-button:hover{
+  cursor: pointer;
 }
 
 .values-container {

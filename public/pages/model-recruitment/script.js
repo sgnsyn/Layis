@@ -1,61 +1,53 @@
 import {
-    createPageProgressBtn,
+  createPageProgressBtn,
   getCurrentPage,
   getTargetPage,
+  handleLastPage,
   highlightPageProgressBtn,
   setFormName,
   toggleDisabled,
 } from "./util-js/ui.js";
 
 const formNameSpans = document.getElementsByClassName("form-name");
+const mainEl = document.getElementById("main");
 
 const desktopBackBtn = document.getElementById("back-btn-desktop");
 const desktopNextBtn = document.getElementById("next-btn-desktop");
 const mobileBackBtn = document.getElementById("back-btn-mobile");
 const mobileNextBtn = document.getElementById("next-btn-mobile");
 
-const desktopPageIndicator = document.getElementById("desktop-pages-indicator")
-const mobilePageIndicator = document.getElementById("mobile-pages-indicator")
+const desktopPageIndicator = document.getElementById("desktop-pages-indicator");
+const mobilePageIndicator = document.getElementById("mobile-pages-indicator");
 
-const desktopSubmitButton = document.getElementById("submit-btn-desktop")
-const mobileSubmitButton = document.getElementById("submit-btn-mobile")
+const desktopSubmitButton = document.getElementById("submit-btn-desktop");
+const mobileSubmitButton = document.getElementById("submit-btn-mobile");
 
+const backButtons = [mobileBackBtn, desktopSubmitButton];
+const nextButtons = [mobileNextBtn, desktopNextBtn];
+const submitButtons = [mobileSubmitButton, desktopSubmitButton];
 
 const formGroups = document.getElementsByClassName("form-group");
 const pageLength = formGroups.length;
 
-
 function nextBtnHandler() {
   const currentPage = getCurrentPage(formGroups);
   const currentPageNumber = parseInt(currentPage.dataset.page);
-  const targetPageNumber = parseInt(currentPageNumber) + 1;
+  const targetPageNumber = currentPageNumber + 1;
 
   switch (targetPageNumber) {
     case pageLength + 1:
       return;
     case pageLength:
-      toggleDisabled([mobileNextBtn, desktopNextBtn], true);
+      toggleDisabled(nextButtons, true);
+      handleLastPage(submitButtons, nextButtons, mainEl, true);
       break;
     case 2:
-      toggleDisabled([desktopBackBtn, mobileBackBtn], false);
+      toggleDisabled(backButtons, false);
   }
 
   const targetPage = getTargetPage(formGroups, targetPageNumber);
   if (currentPage && targetPage) {
-    currentPage.classList.add("disabled");
-    targetPage.classList.remove("disabled");
-
-    const mobileButtons = mobilePageIndicator.querySelectorAll("button")
-    if(mobileButtons){
-      highlightPageProgressBtn(mobileButtons, targetPageNumber)
-    }
-
-    const desktopButton = desktopPageIndicator.querySelectorAll("button")
-    if(desktopButton ){
-      highlightPageProgressBtn(desktopButton , targetPageNumber)
-    }
-
-    setFormName(formNameSpans, targetPage);
+    pageChangeHandler(currentPage, targetPage, targetPageNumber);
   }
 }
 
@@ -68,30 +60,61 @@ function backBtnHandler() {
     case 0:
       return;
     case 1:
-      toggleDisabled([desktopBackBtn, mobileBackBtn], true);
+      toggleDisabled(backButtons, true);
       break;
     case pageLength - 1:
-      toggleDisabled([mobileNextBtn, desktopNextBtn], false);
+      toggleDisabled(nextButtons, false);
+      handleLastPage(submitButtons, nextButtons, mainEl, false);
   }
 
   const targetPage = getTargetPage(formGroups, targetPageNumber);
 
   if (currentPage && targetPage) {
-    currentPage.classList.add("disabled");
-    targetPage.classList.remove("disabled");
-
-    const mobileButtons = mobilePageIndicator.querySelectorAll("button")
-    if(mobileButtons){
-      highlightPageProgressBtn(mobileButtons, targetPageNumber)
-    }
-
-    const desktopButton = desktopPageIndicator.querySelectorAll("button")
-    if(desktopButton ){
-      highlightPageProgressBtn(desktopButton , targetPageNumber)
-    }
-
-    setFormName(formNameSpans, targetPage);
+    pageChangeHandler(currentPage, targetPage, targetPageNumber);
   }
+}
+
+function navBtnHandler(event) {
+  const btn = event.target;
+  const targetPageNumber = parseInt(btn.dataset.pageNumber);
+
+  if (targetPageNumber == pageLength) {
+    handleLastPage(submitButtons, nextButtons, mainEl, true);
+    toggleDisabled(nextButtons, true);
+    toggleDisabled(backButtons, false);
+  } else if (targetPageNumber == 1) {
+    toggleDisabled(backButtons, true);
+    toggleDisabled(nextButtons, false);
+    handleLastPage(submitButtons, nextButtons, mainEl, false);
+  } else if (2 <= targetPageNumber && targetPageNumber <= pageLength - 1) {
+    toggleDisabled(backButtons, false);
+    toggleDisabled(nextButtons, false);
+    handleLastPage(submitButtons, nextButtons, mainEl, false);
+  }
+
+  const currentPage = getCurrentPage(formGroups);
+  const targetPage = getTargetPage(formGroups, targetPageNumber);
+
+  if (currentPage && targetPage) {
+    pageChangeHandler(currentPage, targetPage, targetPageNumber);
+  }
+}
+
+function pageChangeHandler(currentPage, targetPage, targetPageNumber) {
+  currentPage.classList.add("disabled");
+  targetPage.classList.remove("disabled");
+
+  const mobileButtons = mobilePageIndicator.querySelectorAll("button");
+  if (mobileButtons) {
+    highlightPageProgressBtn(mobileButtons, targetPageNumber);
+  }
+
+  const desktopButton = desktopPageIndicator.querySelectorAll("button");
+  if (desktopButton) {
+    highlightPageProgressBtn(desktopButton, targetPageNumber);
+  }
+
+  setFormName(formNameSpans, targetPage);
 }
 
 function initialize() {
@@ -102,18 +125,34 @@ function initialize() {
 
   const currentPageNumber = parseInt(currentPage.dataset.page);
 
-  const mobilePageIndicatorBtn = createPageProgressBtn(pageLength, currentPageNumber) 
-  const desktopPageIndicatorBtn = createPageProgressBtn(pageLength, currentPageNumber) 
+  const mobilePageIndicatorBtn = createPageProgressBtn(
+    pageLength,
+    currentPageNumber,
+  );
+  const desktopPageIndicatorBtn = createPageProgressBtn(
+    pageLength,
+    currentPageNumber,
+  );
 
-  mobilePageIndicator.append(...mobilePageIndicatorBtn)
-  desktopPageIndicator.append(...desktopPageIndicatorBtn)
+  mobilePageIndicatorBtn.forEach((btn) => {
+    btn.addEventListener("click", navBtnHandler);
+  });
+
+  desktopPageIndicatorBtn.forEach((btn) => {
+    btn.addEventListener("click", navBtnHandler);
+  });
+
+  mobilePageIndicator.append(...mobilePageIndicatorBtn);
+  desktopPageIndicator.append(...desktopPageIndicatorBtn);
 
   switch (currentPageNumber) {
     case pageLength:
-      toggleDisabled([mobileNextBtn, desktopNextBtn], true);
+      toggleDisabled(nextButtons, true);
+      handleLastPage(submitButtons, nextButtons, mainEl, true);
+
       break;
     case 1:
-      toggleDisabled([desktopBackBtn, mobileBackBtn], true);
+      toggleDisabled(backButtons, true);
       break;
   }
 }

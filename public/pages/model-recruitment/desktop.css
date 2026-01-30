@@ -34,10 +34,9 @@
   }
 
   main {
-    display: grid;
-    grid-template-columns: 4rem auto;
+    display: flex;
     padding: 1rem;
-    gap: 2rem;
+    position: relative;
   }
 
   form {
@@ -49,9 +48,6 @@
     padding-right: 0.35rem;
   }
 
-  .desktop-pages-indicator {
-    width: 2.14rem;
-  }
 
   .attribute {
     padding-block: 1rem 1.5rem;
@@ -151,15 +147,17 @@
 
   /* Page indicators */
   #desktop-pages-indicator {
-    justify-self: start;
-    align-self: center;
-    transform: translateY(-75%);
+    position: absolute;
+    top: 50%;
+    left: 5.3rem;
+    transform: translateY(-100%);
+
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
   }
 
-  #desktop-pages-indicator button{
+  #desktop-pages-indicator button {
     width: 3rem;
     height: 0.5rem;
     border-radius: 100vw;
@@ -168,7 +166,8 @@
     opacity: 0.5;
   }
 
-  #desktop-pages-indicator button.selected{
-    opacity:1
+  #desktop-pages-indicator button.selected {
+    opacity: 1;
   }
+
 }
